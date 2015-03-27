@@ -4,9 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [],
   "author": "suisho",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "compact-diff": "0.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^2.2.1",
+    "power-assert": "^0.10.2"
+  }
 }
