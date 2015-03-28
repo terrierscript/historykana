@@ -1,6 +1,8 @@
 # historykana
 > Get Japanese *Furigana* From Input
 
+[![Circle CI](https://circleci.com/gh/suisho/historykana.svg?style=svg)](https://circleci.com/gh/suisho/historykana)
+
 # Usage
 
 ```
