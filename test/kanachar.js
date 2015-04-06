@@ -1,4 +1,5 @@
-var kanachar = require("../lib/kanachar")
+var rewire = require("rewire")
+var kanachar = rewire("../lib/historykana").__get__("isKana")
 var assert = require("power-assert")
 
 describe("hiragana", function(){

@@ -16,6 +16,7 @@
   "devDependencies": {
     "eslint": "^0.18.0",
     "mocha": "^2.2.1",
-    "power-assert": "^0.10.2"
+    "power-assert": "^0.10.2",
+    "rewire": "^2.3.1"
   }
 }

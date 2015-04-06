@@ -24,11 +24,7 @@
     "globalReturn": true,
     "jsx": true
   },
-  "plugins": [
-    "react"
-  ],
   "rules": {
-    "react/display-name": 1,
     "no-underscore-dangle" : [0],
     "semi" : [2 , "never"],
     "strict" : false,
