@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": "https://github.com/suisho/historykana.git",
   "keywords": [],
   "author": "suisho",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "compact-diff": "0.0.3"
   },
   "devDependencies": {
+    "eslint": "^0.18.0",
     "mocha": "^2.2.1",
     "power-assert": "^0.10.2"
   }
