@@ -1,7 +1,11 @@
-var rewire = require("rewire")
-var kanachar = rewire("../lib/historykana").__get__("isKana")
-var assert = require("power-assert")
+var HistoryKana = require("../index").HistoryKana
+var hKana = new HistoryKana()
+var kanachar = function(str){
+  return hKana.isKana(str)
+}
 
+var assert = require("power-assert")
+console.log(kanachar)
 describe("hiragana", function(){
   describe("is_hiragana", function(){
     it("noraml", function(){
