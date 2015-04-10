@@ -9,7 +9,7 @@ var assert = require("power-assert")
 console.log(kanachar)
 describe("hiragana", function(){
   describe("is_hiragana", function(){
-    it("noraml", function(){
+    it("noaml", function(){
       assert.equal(true, kanachar("あいう"))
     })
     it("kanji", function(){
