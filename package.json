@@ -11,7 +11,8 @@
   "author": "suisho",
   "license": "ISC",
   "dependencies": {
-    "compact-diff": "0.0.3"
+    "compact-diff": "0.0.3",
+    "extend": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^0.18.0",
