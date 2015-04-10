@@ -1,4 +1,5 @@
-var HistoryKana = require("../index").HistoryKana
+var HistoryKana = require("../lib/historykana").HistoryKana
+
 var hKana = new HistoryKana()
 var kanachar = function(str){
   return hKana.isKana(str)
