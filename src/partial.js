@@ -4,24 +4,25 @@ var isChanged = function(diff){
   return (diff.added || diff.removed)
 }
 
-
 var getSameValue = function(diffs){
-  var stop = false
-  return diffs.reduce(function(result, diff){
-    if(isChanged(diff) || stop){
-      stop = true
-      return result
+  var sameValues = []
+  for(var i = 0; i < diffs.length; i++){
+    var diff = diffs[i]
+    if(isChanged(diff)){
+      break
     }
-    result.push(diff)
-    return result
-  }, []).map(function(diff){
-    return diff.value
+    sameValues.push(diff)
+  }
+  return sameValues.map(function(same){
+    return same.value
   })
 }
 
+// reverse sameValue
 var getSameValueFromRight = function(diffs){
   return getSameValue(diffs.concat().reverse()).reverse()
 }
+
 var getEdges = function(value1, value2){
   var diffs = compactDiff(value1, value2)
   return {
@@ -82,7 +83,7 @@ var cleaning = function(array, left, right){
 }
 
 var split = function(array, breakpoint){
-  var left = array.concat() // copy
+  var left = array.concat() // deep copy
   var right = left.splice(0, breakpoint - 1)
   return {
     left : left,
@@ -103,19 +104,19 @@ var partializeRecursive = function(array){
   // recursive
   var splited = split(array, breaks.breakpoint)
 
-  var rest = splited.left
-  var hitted = cleaning(splited.right, breaks.left, breaks.right)
+  var left = splited.left
+  var cleaned = cleaning(splited.right, breaks.left, breaks.right)
 
-  var r = partializeRecursive(rest)
-  var h = partializeRecursive(hitted)
+  var leftRecursive = partializeRecursive(left)
+  var cleanedRecursive = partializeRecursive(cleaned)
 
   if(breaks.left !== ""){
-    return r.concat(h)
+    return leftRecursive.concat(cleanedRecursive)
   }else{
-    return h.concat(r)
+    return cleanedRecursive.concat(leftRecursive)
   }
 }
 
-module.exports = function(array){
+export default function(array){
   return partializeRecursive(array.concat().reverse())
 }
