@@ -8,8 +8,10 @@
     "arrowFunctions": true,
     "binaryLiterals": true,
     "blockBindings": true,
+    "classes": true,
     "defaultParams": true,
     "forOf": true,
+    "modules": true,
     "generators": true,
     "objectLiteralComputedProperties": true,
     "objectLiteralDuplicateProperties": true,
@@ -24,11 +26,7 @@
     "globalReturn": true,
     "jsx": true
   },
-  "plugins": [
-    "react"
-  ],
   "rules": {
-    "react/display-name": 1,
     "no-underscore-dangle" : [0],
     "semi" : [2 , "never"],
     "strict" : false,

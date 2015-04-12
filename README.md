@@ -1,5 +1,5 @@
-# historykana
-> Get Japanese *Furigana* From Input
+# HistoryKana
+Get Japanese ***Furigana*** From Input
 
 [![Circle CI](https://circleci.com/gh/suisho/historykana.svg?style=svg)](https://circleci.com/gh/suisho/historykana)
 
@@ -13,4 +13,17 @@ var inputHistory = ["ｙ","や","やｍ","やま","やまｄ","やまだ","山�
 
 var historykana(inputHistory)
 // => やまだたろう
+
 ```
+
+# API
+## `historykana(history, options)`
+- `history` (Required)
+  - Input History Array
+- `options`
+  - Option objec.
+
+## Options
+### `kanaRegexp` (=`"^[ 　ぁあ-んー]*$"`)
+Hiragana detection regular expression rule.
+

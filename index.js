@@ -1,1 +1,1 @@
-module.exports = require("./lib/historykana.js")
+module.exports = require("./lib/index.js")
