@@ -6,7 +6,8 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "watch": "babel src --out-dir lib -w",
-    "test": "npm run build && mocha"
+    "test": "npm run build && mocha",
+    "prepublish": "npm run build"
   },
   "files": [
     "lib",
