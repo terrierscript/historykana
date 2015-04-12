@@ -1,9 +1,15 @@
-var kanachar = require("../lib/kanachar")
-var assert = require("power-assert")
+var HistoryKana = require("../lib/historykana").HistoryKana
 
+var hKana = new HistoryKana()
+var kanachar = function(str){
+  return hKana.isKana(str)
+}
+
+var assert = require("power-assert")
+console.log(kanachar)
 describe("hiragana", function(){
   describe("is_hiragana", function(){
-    it("noraml", function(){
+    it("noaml", function(){
       assert.equal(true, kanachar("あいう"))
     })
     it("kanji", function(){

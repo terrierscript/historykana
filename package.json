@@ -4,16 +4,26 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "build": "babel src --out-dir lib",
+    "watch": "babel src --out-dir lib -w",
+    "test": "npm run build && mocha"
   },
+  "files" : ["lib", "index.js"],
+  "repository": "https://github.com/suisho/historykana.git",
   "keywords": [],
   "author": "suisho",
   "license": "ISC",
   "dependencies": {
-    "compact-diff": "0.0.3"
+    "compact-diff": "0.0.3",
+    "extend": "^2.0.0"
   },
   "devDependencies": {
+    "babel": "^5.0.12",
+    "eslint": "^0.18.0",
+    "espower-babel": "^2.0.0",
     "mocha": "^2.2.1",
-    "power-assert": "^0.10.2"
+    "power-assert": "^0.10.2",
+    "rewire": "^2.3.1",
+    "source-map-support": "^0.2.10"
   }
 }

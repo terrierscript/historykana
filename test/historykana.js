@@ -3,7 +3,7 @@ var historykana = require("../index")
 // var todo = process.env.CI ? it.skip : it
 var stepTest = function(steps, kana){
   var result = historykana(steps)
-  assert.equal(kana, result.kana)
+  assert.equal(kana, result)
 }
 describe("historykana", function(){
   describe("simple", function(){
