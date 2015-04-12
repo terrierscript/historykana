@@ -6,8 +6,9 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "watch": "babel src --out-dir lib -w",
-    "test": "mocha"
+    "test": "npm run build && mocha"
   },
+  "files" : ["lib", "index.js"]
   "repository": "https://github.com/suisho/historykana.git",
   "keywords": [],
   "author": "suisho",
