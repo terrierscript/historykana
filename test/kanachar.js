@@ -6,7 +6,6 @@ var kanachar = function(str){
 }
 
 var assert = require("power-assert")
-console.log(kanachar)
 describe("hiragana", function(){
   describe("is_hiragana", function(){
     it("noaml", function(){
