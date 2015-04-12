@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "files" : ["lib", "index.js"]
   "keywords": [],
   "author": "suisho",
   "license": "ISC",
