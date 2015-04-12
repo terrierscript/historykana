@@ -1,7 +1,7 @@
 {
   "name": "historykana",
   "version": "1.0.2",
-  "description": "",
+  "description": "Analyse Japanese Furigana from key input history",
   "main": "index.js",
   "scripts": {
     "build": "babel src --out-dir lib",
