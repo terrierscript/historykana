@@ -19,15 +19,15 @@
   "license": "MIT",
   "dependencies": {
     "compact-diff": "0.0.3",
-    "extend": "^2.0.0"
+    "extend": "^3.0.0"
   },
   "devDependencies": {
-    "babel": "^5.0.12",
-    "eslint": "^0.18.0",
-    "espower-babel": "^2.0.0",
+    "babel": "^6.3.26",
+    "eslint": "^1.10.3",
+    "espower-babel": "^4.0.1",
     "mocha": "^2.2.1",
-    "power-assert": "^0.10.2",
+    "power-assert": "^1.2.0",
     "rewire": "^2.3.1",
-    "source-map-support": "^0.2.10"
+    "source-map-support": "^0.4.0"
   }
 }
