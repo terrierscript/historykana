@@ -13,10 +13,10 @@
     "lib",
     "index.js"
   ],
-  "repository": "https://github.com/suisho/historykana.git",
+  "repository": "https://github.com/inuscript/historykana.git",
   "keywords": [],
-  "author": "suisho",
-  "license": "ISC",
+  "author": "inuscript",
+  "license": "MIT",
   "dependencies": {
     "compact-diff": "0.0.3",
     "extend": "^2.0.0"
