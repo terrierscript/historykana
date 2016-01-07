@@ -1,5 +1,6 @@
 var assert = require("power-assert")
 var historykana = require("../index")
+console.log(historykana)
 // var todo = process.env.CI ? it.skip : it
 var stepTest = function(steps, kana){
   var result = historykana(steps)

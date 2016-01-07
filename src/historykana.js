@@ -1,4 +1,4 @@
-var partialize = require("./partial")
+var partialize = require("./partial").partialize
 var extend = require("extend")
 var util = require("util")
 

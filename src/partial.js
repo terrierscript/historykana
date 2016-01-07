@@ -117,6 +117,6 @@ var partializeRecursive = function(array){
   }
 }
 
-export default function(array){
+export function partialize(array){
   return partializeRecursive(array.concat().reverse())
 }
