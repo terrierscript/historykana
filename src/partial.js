@@ -1,4 +1,4 @@
-var compactDiff = require("compact-diff")
+import compactDiff from "compact-diff"
 
 var isChanged = function(diff){
   return (diff.added || diff.removed)
