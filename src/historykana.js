@@ -1,6 +1,6 @@
-var partialize = require("./partial")
-var extend = require("extend")
-var util = require("util")
+import partialize from "./partial"
+import extend from "extend"
+import util from "util"
 
 export class HistoryKana{
   constructor(options){
