@@ -1,3 +1,4 @@
+var assert = require("assert")
 var HistoryKana = require("../lib/historykana").HistoryKana
 
 var hKana = new HistoryKana()
@@ -5,7 +6,6 @@ var kanachar = function(str){
   return hKana.isKana(str)
 }
 
-var assert = require("power-assert")
 describe("hiragana", function(){
   describe("is_hiragana", function(){
     it("noaml", function(){

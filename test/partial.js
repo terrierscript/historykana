@@ -1,5 +1,6 @@
+var assert = require("assert")
+
 var partial = require("../lib/partial").default
-var assert = require("power-assert")
 var heads = function(result){
   return result.map(function(p){
     return p[0]
