@@ -1,5 +1,4 @@
 var assert = require("assert")
-
 var partial = require("../lib/partial").default
 var heads = function(result){
   return result.map(function(p){
