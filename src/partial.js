@@ -1,67 +1,67 @@
-import compactDiff from "compact-diff"
+import compactDiff from 'compact-diff'
 
-var isChanged = function(diff){
+var isChanged = function (diff) {
   return (diff.added || diff.removed)
 }
 
-var getSameValue = function(diffs){
+var getSameValue = function (diffs) {
   var sameValues = []
-  for(var i = 0; i < diffs.length; i++){
+  for (var i = 0; i < diffs.length; i++) {
     var diff = diffs[i]
-    if(isChanged(diff)){
+    if (isChanged(diff)) {
       break
     }
     sameValues.push(diff)
   }
-  return sameValues.map(function(same){
+  return sameValues.map(function (same) {
     return same.value
   })
 }
 
 // reverse sameValue
-var getSameValueFromRight = function(diffs){
+var getSameValueFromRight = function (diffs) {
   return getSameValue(diffs.concat().reverse()).reverse()
 }
 
-var getEdges = function(value1, value2){
+var getEdges = function (value1, value2) {
   var diffs = compactDiff(value1, value2)
   return {
-    left : getSameValue(diffs).join(""),
-    right : getSameValueFromRight(diffs).join("")
+    left: getSameValue(diffs).join(''),
+    right: getSameValueFromRight(diffs).join('')
   }
 }
 
-var getBreakPoint = function(array){
+var getBreakPoint = function (array) {
   var head = array[0]
   var left, right
   var breakpoint = -1
   // detect breakpoint
-  array.forEach(function(value, i){
-    if(!array[i + 1] || head === value || breakpoint > -1){
+  array.forEach(function (value, i) {
+    if (!array[i + 1] || head === value || breakpoint > -1) {
       return
     }
-    if(value === ""){
+    if (value === '') {
       breakpoint = i + 1
       return
     }
     var edges = getEdges(value, head)
 
     // initial edges
-    if(left === undefined && right === undefined){
+    if (left === undefined && right === undefined) {
       left = edges.left
       right = edges.right
       return
     }
 
     // check left & update
-    if(left !== edges.left && right === "" && edges.left === ""){
+    if (left !== edges.left && right === '' && edges.left === '') {
       breakpoint = i
       return
     }
     left = edges.left
 
     // check right & update
-    if(right !== edges.right && left === "" && edges.right === ""){
+    if (right !== edges.right && left === '' && edges.right === '') {
       breakpoint = i
       return
     }
@@ -69,33 +69,33 @@ var getBreakPoint = function(array){
   })
 
   return {
-    breakpoint : breakpoint,
-    left : left,
-    right : right
+    breakpoint: breakpoint,
+    left: left,
+    right: right
   }
 }
 
-var cleaning = function(array, left, right){
-  return array.map(function(value){
-    var reg = new RegExp("^" + left + "(.*)" + right + "$")
-    return value.replace(reg, "$1")
+var cleaning = function (array, left, right) {
+  return array.map(function (value) {
+    var reg = new RegExp('^' + left + '(.*)' + right + '$')
+    return value.replace(reg, '$1')
   })
 }
 
-var split = function(array, breakpoint){
+var split = function (array, breakpoint) {
   var left = array.concat() // deep copy
   var right = left.splice(0, breakpoint - 1)
   return {
-    left : left,
-    right : right
+    left: left,
+    right: right
   }
 }
 
-var partializeRecursive = function(array){
+var partializeRecursive = function (array) {
   var breaks = getBreakPoint(array)
   // recursive edge
-  if(breaks.breakpoint === -1){
-    if(array[0] === ""){
+  if (breaks.breakpoint === -1) {
+    if (array[0] === '') {
       return []
     }
     return [array]
@@ -110,13 +110,13 @@ var partializeRecursive = function(array){
   var leftRecursive = partializeRecursive(left)
   var cleanedRecursive = partializeRecursive(cleaned)
 
-  if(breaks.left !== ""){
+  if (breaks.left !== '') {
     return leftRecursive.concat(cleanedRecursive)
-  }else{
+  } else {
     return cleanedRecursive.concat(leftRecursive)
   }
 }
 
-export default function(array){
+export default function (array) {
   return partializeRecursive(array.concat().reverse())
 }
