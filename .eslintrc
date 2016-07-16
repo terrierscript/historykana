@@ -4,37 +4,5 @@
     "browser" : true,
     "mocha": true
   },
-  "ecmaFeatures" : {
-    "arrowFunctions": true,
-    "binaryLiterals": true,
-    "blockBindings": true,
-    "classes": true,
-    "defaultParams": true,
-    "forOf": true,
-    "modules": true,
-    "generators": true,
-    "objectLiteralComputedProperties": true,
-    "objectLiteralDuplicateProperties": true,
-    "objectLiteralShorthandMethods": true,
-    "objectLiteralShorthandProperties": true,
-    "octalLiterals": true,
-    "regexUFlag": true,
-    "regexYFlag": true,
-    "superInFunctions": true,
-    "templateStrings": true,
-    "unicodeCodePointEscapes": true,
-    "globalReturn": true,
-    "jsx": true
-  },
-  "rules": {
-    "no-underscore-dangle" : [0],
-    "semi" : [2 , "never"],
-    "strict" : false,
-    "key-spacing" : [0, {
-      "beforeColon" : true,
-      "afterColon" : true,
-    }],
-    "no-unused-vars": [1, {"vars" : "all", "args" : "after-used"} ],
-    "no-comma-dangle" : false
-  }
+  "extends": "standard"
 }
