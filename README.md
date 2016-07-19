@@ -17,8 +17,8 @@ var historykana(inputHistory)
 ```
 
 # API
-## `historykana(history, options)`
-- `history` (Required)
+## `historykana(inputHistories, options)`
+- `inputHistories` (Required)
   - Input History Array
 - `options`
   - Option objec.
