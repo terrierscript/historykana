@@ -21,7 +21,7 @@ var historykana(inputHistory)
 - `inputHistories` (Required)
   - Input History Array
 - `options`
-  - Option objec.
+  - Option object.
 
 ## Options
 ### `kanaRegexp` (=`"^[ 　ぁあ-んー]*$"`)
