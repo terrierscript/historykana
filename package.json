@@ -34,6 +34,6 @@
     "eslint-config-standard": "^6.0.0-beta.0",
     "eslint-plugin-promise": "^2.0.0",
     "eslint-plugin-standard": "^2.0.0",
-    "mocha": "^2.2.1"
+    "mocha": "^3.0.0"
   }
 }
