@@ -25,15 +25,15 @@
   "license": "MIT",
   "dependencies": {
     "compact-diff": "0.0.3",
-    "extend": "^2.0.0"
+    "extend": "^3.0.0"
   },
   "devDependencies": {
     "babel-cli": "^6.5.0",
     "babel-preset-es2015": "^6.3.13",
     "eslint": "^3.1.0",
     "eslint-config-standard": "^6.0.0-beta.0",
-    "eslint-plugin-promise": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.0",
     "eslint-plugin-standard": "^2.0.0",
-    "mocha": "^2.2.1"
+    "mocha": "^3.2.0"
   }
 }

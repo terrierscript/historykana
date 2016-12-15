@@ -591,6 +591,10 @@ braces@^1.8.2:
     preserve "^0.2.0"
     repeat-element "^1.1.2"
 
+browser-stdout@1.3.0:
+  version "1.3.0"
+  resolved browser-stdout-1.3.0.tgz#f351d32969d32fa5d7a5567154263d928ae3bd1f
+
 buffer-shims@^1.0.0:
   version "1.0.0"
   resolved buffer-shims-1.0.0.tgz#9978ce317388c649ad8793028c3477ef044a8b51
@@ -662,15 +666,7 @@ combined-stream@^1.0.5, combined-stream@~1.0.5:
   dependencies:
     delayed-stream "~1.0.0"
 
-commander@0.6.1:
-  version "0.6.1"
-  resolved commander-0.6.1.tgz#fa68a14f6a945d54dbbe50d8cdb3320e9e3b1a06
-
-commander@2.3.0:
-  version "2.3.0"
-  resolved commander-2.3.0.tgz#fd430e889832ec353b9acd1de217c11cb3eef873
-
-commander@^2.8.1, commander@^2.9.0:
+commander@2.9.0, commander@^2.8.1, commander@^2.9.0:
   version "2.9.0"
   resolved commander-2.9.0.tgz#9c99094176e12240cb22d6c5146098400fe0f7d4
   dependencies:
@@ -843,13 +839,13 @@ es6-weak-map@^2.0.1:
     es6-iterator "2"
     es6-symbol "3"
 
-escape-string-regexp@1.0.2, escape-string-regexp@^1.0.2:
-  version "1.0.2"
-  resolved escape-string-regexp-1.0.2.tgz#4dbc2fe674e71949caf3fb2695ce7f2dc1d9a8d1
-
-escape-string-regexp@^1.0.5:
+escape-string-regexp@1.0.5, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4
+
+escape-string-regexp@^1.0.2:
+  version "1.0.2"
+  resolved escape-string-regexp-1.0.2.tgz#4dbc2fe674e71949caf3fb2695ce7f2dc1d9a8d1
 
 escope@^3.6.0:
   version "3.6.0"
@@ -864,9 +860,9 @@ eslint-config-standard@^6.0.0-beta.0:
   version "6.2.1"
   resolved eslint-config-standard-6.2.1.tgz#d3a68aafc7191639e7ee441e7348739026354292
 
-eslint-plugin-promise@^2.0.0:
-  version "2.0.1"
-  resolved eslint-plugin-promise-2.0.1.tgz#a9759cefa5e38ab11bb2ef65a04ef042309aa0a4
+eslint-plugin-promise@^3.4.0:
+  version "3.4.0"
+  resolved eslint-plugin-promise-3.4.0.tgz#6ba9048c2df57be77d036e0c68918bc9b4fc4195
 
 eslint-plugin-standard@^2.0.0:
   version "2.0.1"
@@ -964,11 +960,7 @@ expand-range@^1.8.1:
   dependencies:
     fill-range "^2.1.0"
 
-extend@^2.0.0:
-  version "2.0.1"
-  resolved extend-2.0.1.tgz#1ee8010689e7395ff9448241c98652bc759a8260
-
-extend@~3.0.0:
+extend@^3.0.0, extend@~3.0.0:
   version "3.0.0"
   resolved extend-3.0.0.tgz#5a474353b9f3353ddd8176dfd37b91c83a46f1d4
 
@@ -1120,12 +1112,16 @@ glob-parent@^2.0.0:
   dependencies:
     is-glob "^2.0.0"
 
-glob@3.2.11:
-  version "3.2.11"
-  resolved glob-3.2.11.tgz#4a973f635b9190f715d10987d5c00fd2815ebe3d
+glob@7.0.5:
+  version "7.0.5"
+  resolved glob-7.0.5.tgz#b4202a69099bbb4d292a7c1b95b6682b67ebdc95
   dependencies:
+    fs.realpath "^1.0.0"
+    inflight "^1.0.4"
     inherits "2"
-    minimatch "0.3"
+    minimatch "^3.0.2"
+    once "^1.3.0"
+    path-is-absolute "^1.0.0"
 
 glob@^5.0.5:
   version "5.0.15"
@@ -1189,6 +1185,10 @@ has-ansi@^2.0.0:
   resolved has-ansi-2.0.0.tgz#34f5049ce1ecdf2b0649af3ef24e45ed35416d91
   dependencies:
     ansi-regex "^2.0.0"
+
+has-flag@^1.0.0:
+  version "1.0.0"
+  resolved has-flag-1.0.0.tgz#9d9e793165ce017a00f00418c43f942a7b1d11fa
 
 has-unicode@^2.0.0:
   version "2.0.1"
@@ -1390,13 +1390,6 @@ isstream@~0.1.2:
   version "0.1.2"
   resolved isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a
 
-jade@0.26.3:
-  version "0.26.3"
-  resolved jade-0.26.3.tgz#8f10d7977d8d79f2f6ff862a81b0513ccb25686c
-  dependencies:
-    commander "0.6.1"
-    mkdirp "0.3.0"
-
 jodid25519@^1.0.0:
   version "1.0.2"
   resolved jodid25519-1.0.2.tgz#06d4912255093419477d425633606e0e90782967
@@ -1440,6 +1433,10 @@ json-stringify-safe@~5.0.1:
   version "5.0.1"
   resolved json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb
 
+json3@3.3.2:
+  version "3.3.2"
+  resolved json3-3.3.2.tgz#3c0434743df93e2f5c42aee7b19bcb483575f4e1
+
 json5@^0.5.0:
   version "0.5.1"
   resolved json5-0.5.1.tgz#1eade7acc012034ad84e2396767ead9fa5495821
@@ -1473,6 +1470,53 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
+lodash._baseassign@^3.0.0:
+  version "3.2.0"
+  resolved lodash._baseassign-3.2.0.tgz#8c38a099500f215ad09e59f1722fd0c52bfe0a4e
+  dependencies:
+    lodash._basecopy "^3.0.0"
+    lodash.keys "^3.0.0"
+
+lodash._basecopy@^3.0.0:
+  version "3.0.1"
+  resolved lodash._basecopy-3.0.1.tgz#8da0e6a876cf344c0ad8a54882111dd3c5c7ca36
+
+lodash._basecreate@^3.0.0:
+  version "3.0.3"
+  resolved lodash._basecreate-3.0.3.tgz#1bc661614daa7fc311b7d03bf16806a0213cf821
+
+lodash._getnative@^3.0.0:
+  version "3.9.1"
+  resolved lodash._getnative-3.9.1.tgz#570bc7dede46d61cdcde687d65d3eecbaa3aaff5
+
+lodash._isiterateecall@^3.0.0:
+  version "3.0.9"
+  resolved lodash._isiterateecall-3.0.9.tgz#5203ad7ba425fae842460e696db9cf3e6aac057c
+
+lodash.create@3.1.1:
+  version "3.1.1"
+  resolved lodash.create-3.1.1.tgz#d7f2849f0dbda7e04682bb8cd72ab022461debe7
+  dependencies:
+    lodash._baseassign "^3.0.0"
+    lodash._basecreate "^3.0.0"
+    lodash._isiterateecall "^3.0.0"
+
+lodash.isarguments@^3.0.0:
+  version "3.1.0"
+  resolved lodash.isarguments-3.1.0.tgz#2f573d85c6a24289ff00663b491c1d338ff3458a
+
+lodash.isarray@^3.0.0:
+  version "3.0.4"
+  resolved lodash.isarray-3.0.4.tgz#79e4eb88c36a8122af86f844aa9bcd851b5fbb55
+
+lodash.keys@^3.0.0:
+  version "3.1.2"
+  resolved lodash.keys-3.1.2.tgz#4dbc0472b156be50a0b286855d1bd0b0c656098a
+  dependencies:
+    lodash._getnative "^3.0.0"
+    lodash.isarguments "^3.0.0"
+    lodash.isarray "^3.0.0"
+
 lodash@^4.0.0, lodash@^4.2.0, lodash@^4.3.0:
   version "4.17.2"
   resolved lodash-4.17.2.tgz#34a3055babe04ce42467b607d700072c7ff6bf42
@@ -1482,10 +1526,6 @@ loose-envify@^1.0.0:
   resolved loose-envify-1.3.0.tgz#6b26248c42f6d4fa4b0d8542f78edfcde35642a8
   dependencies:
     js-tokens "^2.0.0"
-
-lru-cache@2:
-  version "2.7.3"
-  resolved lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952
 
 micromatch@^2.1.5:
   version "2.3.11"
@@ -1515,13 +1555,6 @@ mime-types@^2.1.12, mime-types@~2.1.7:
   dependencies:
     mime-db "~1.25.0"
 
-minimatch@0.3:
-  version "0.3.0"
-  resolved minimatch-0.3.0.tgz#275d8edaac4f1bb3326472089e7949c8394699dd
-  dependencies:
-    lru-cache "2"
-    sigmund "~1.0.0"
-
 "minimatch@2 || 3", minimatch@^3.0.0, minimatch@^3.0.2:
   version "3.0.3"
   resolved minimatch-3.0.3.tgz#2a4e4090b96b2db06a9d7df01055a62a77c9b774
@@ -1536,30 +1569,27 @@ minimist@^1.2.0:
   version "1.2.0"
   resolved minimist-1.2.0.tgz#a35008b20f41383eec1fb914f4cd5df79a264284
 
-mkdirp@0.3.0:
-  version "0.3.0"
-  resolved mkdirp-0.3.0.tgz#1bbf5ab1ba827af23575143490426455f481fe1e
-
 mkdirp@0.5.1, "mkdirp@>=0.5 0", mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.1:
   version "0.5.1"
   resolved mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903
   dependencies:
     minimist "0.0.8"
 
-mocha@^2.2.1:
-  version "2.5.3"
-  resolved mocha-2.5.3.tgz#161be5bdeb496771eb9b35745050b622b5aefc58
+mocha@^3.2.0:
+  version "3.2.0"
+  resolved mocha-3.2.0.tgz#7dc4f45e5088075171a68896814e6ae9eb7a85e3
   dependencies:
-    commander "2.3.0"
+    browser-stdout "1.3.0"
+    commander "2.9.0"
     debug "2.2.0"
     diff "1.4.0"
-    escape-string-regexp "1.0.2"
-    glob "3.2.11"
+    escape-string-regexp "1.0.5"
+    glob "7.0.5"
     growl "1.9.2"
-    jade "0.26.3"
+    json3 "3.3.2"
+    lodash.create "3.1.1"
     mkdirp "0.5.1"
-    supports-color "1.2.0"
-    to-iso-string "0.0.2"
+    supports-color "3.1.2"
 
 ms@0.7.1:
   version "0.7.1"
@@ -1939,10 +1969,6 @@ shelljs@^0.7.5:
     interpret "^1.0.0"
     rechoir "^0.6.2"
 
-sigmund@~1.0.0:
-  version "1.0.1"
-  resolved sigmund-1.0.1.tgz#3ff21f198cad2175f9f3b781853fd94d0d19b590
-
 signal-exit@^3.0.0:
   version "3.0.2"
   resolved signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d
@@ -2027,9 +2053,11 @@ strip-json-comments@~1.0.1, strip-json-comments@~1.0.4:
   version "1.0.4"
   resolved strip-json-comments-1.0.4.tgz#1e15fbcac97d3ee99bf2d73b4c656b082bbafb91
 
-supports-color@1.2.0:
-  version "1.2.0"
-  resolved supports-color-1.2.0.tgz#ff1ed1e61169d06b3cf2d588e188b18d8847e17e
+supports-color@3.1.2:
+  version "3.1.2"
+  resolved supports-color-3.1.2.tgz#72a262894d9d408b956ca05ff37b2ed8a6e2a2d5
+  dependencies:
+    has-flag "^1.0.0"
 
 supports-color@^0.2.0:
   version "0.2.0"
@@ -2082,10 +2110,6 @@ through@^2.3.6:
 to-fast-properties@^1.0.1:
   version "1.0.2"
   resolved to-fast-properties-1.0.2.tgz#f3f5c0c3ba7299a7ef99427e44633257ade43320
-
-to-iso-string@0.0.2:
-  version "0.0.2"
-  resolved to-iso-string-0.0.2.tgz#4dc19e664dfccbe25bd8db508b00c6da158255d1
 
 tough-cookie@~2.3.0:
   version "2.3.2"
