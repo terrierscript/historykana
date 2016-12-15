@@ -98,7 +98,7 @@ describe("historykana", function(){
       var steps = [ "ｙ", "や", "やｍ", "やま", "やまｄ", "やまだ", "山田", "山田", "山田ｔ", "山田た", "山田たｒ", "山田たろ", "山田たろう", "山田太郎", "山田太郎", "山田太", "山田", "山田ｇ", "山田ご", "山田ごｒ", "山田ごろ", "山田ごろう", "山田五郎", "山田五郎"]
       stepTest(steps, "やまだごろう")
     })
-    it("mobule input", function(){
+    it("mobile input", function(){
       var steps = ["", "や", "ゆ"]
       stepTest(steps, "ゆ")
     })
