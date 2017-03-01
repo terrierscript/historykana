@@ -1,4 +1,5 @@
 import compactDiff from 'compact-diff'
+import escape from 'regexp.escape'
 
 var isChanged = function (diff) {
   return (diff.added || diff.removed)
@@ -76,8 +77,10 @@ var getBreakPoint = function (array) {
 }
 
 var cleaning = function (array, left, right) {
+  const _left = escape(left)
+  const _right = escape(right)
   return array.map(function (value) {
-    var reg = new RegExp('^' + left + '(.*)' + right + '$')
+    var reg = new RegExp(`^${_left}(.*)${_right}$`)
     return value.replace(reg, '$1')
   })
 }
