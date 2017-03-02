@@ -4,5 +4,10 @@
     "browser" : true,
     "mocha": true
   },
-  "extends": "standard"
+  "extends": "standard",
+  "rules": {
+    "no-var": 2,
+    "prefer-const": 2,
+    "array-bracket-spacing": [2, "never"]
+  }
 }
