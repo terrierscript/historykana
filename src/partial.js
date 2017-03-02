@@ -1,14 +1,14 @@
 import compactDiff from 'compact-diff'
 import escape from 'regexp.escape'
 
-var isChanged = function (diff) {
+const isChanged = function (diff) {
   return (diff.added || diff.removed)
 }
 
-var getSameValue = function (diffs) {
-  var sameValues = []
-  for (var i = 0; i < diffs.length; i++) {
-    var diff = diffs[i]
+const getSameValue = function (diffs) {
+  const sameValues = []
+  for (let i = 0; i < diffs.length; i++) {
+    const diff = diffs[i]
     if (isChanged(diff)) {
       break
     }
@@ -20,22 +20,22 @@ var getSameValue = function (diffs) {
 }
 
 // reverse sameValue
-var getSameValueFromRight = function (diffs) {
+const getSameValueFromRight = function (diffs) {
   return getSameValue(diffs.concat().reverse()).reverse()
 }
 
-var getEdges = function (value1, value2) {
-  var diffs = compactDiff(value1, value2)
+const getEdges = function (value1, value2) {
+  const diffs = compactDiff(value1, value2)
   return {
     left: getSameValue(diffs).join(''),
     right: getSameValueFromRight(diffs).join('')
   }
 }
 
-var getBreakPoint = function (array) {
-  var head = array[0]
-  var left, right
-  var breakpoint = -1
+const getBreakPoint = function (array) {
+  const head = array[0]
+  let left, right
+  let breakpoint = -1
   // detect breakpoint
   array.forEach(function (value, i) {
     if (!array[i + 1] || head === value || breakpoint > -1) {
@@ -45,7 +45,7 @@ var getBreakPoint = function (array) {
       breakpoint = i + 1
       return
     }
-    var edges = getEdges(value, head)
+    const edges = getEdges(value, head)
 
     // initial edges
     if (left === undefined && right === undefined) {
@@ -76,18 +76,18 @@ var getBreakPoint = function (array) {
   }
 }
 
-var cleaning = function (array, left, right) {
+const cleaning = function (array, left, right) {
   const _left = escape(left)
   const _right = escape(right)
   return array.map(function (value) {
-    var reg = new RegExp(`^${_left}(.*)${_right}$`)
+    const reg = new RegExp(`^${_left}(.*)${_right}$`)
     return value.replace(reg, '$1')
   })
 }
 
-var split = function (array, breakpoint) {
-  var left = array.concat() // deep copy
-  var right = left.splice(0, breakpoint - 1)
+const split = function (array, breakpoint) {
+  const left = array.concat() // deep copy
+  const right = left.splice(0, breakpoint - 1)
   return {
     left: left,
     right: right
@@ -95,7 +95,7 @@ var split = function (array, breakpoint) {
 }
 
 var partializeRecursive = function (array) {
-  var breaks = getBreakPoint(array)
+  const breaks = getBreakPoint(array)
   // recursive edge
   if (breaks.breakpoint === -1) {
     if (array[0] === '') {
@@ -105,13 +105,13 @@ var partializeRecursive = function (array) {
   }
 
   // recursive
-  var splited = split(array, breaks.breakpoint)
+  const splited = split(array, breaks.breakpoint)
 
-  var left = splited.left
-  var cleaned = cleaning(splited.right, breaks.left, breaks.right)
+  const left = splited.left
+  const cleaned = cleaning(splited.right, breaks.left, breaks.right)
 
-  var leftRecursive = partializeRecursive(left)
-  var cleanedRecursive = partializeRecursive(cleaned)
+  const leftRecursive = partializeRecursive(left)
+  const cleanedRecursive = partializeRecursive(cleaned)
 
   if (breaks.left !== '') {
     return leftRecursive.concat(cleanedRecursive)

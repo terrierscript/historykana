@@ -4,5 +4,8 @@
     "browser" : true,
     "mocha": true
   },
-  "extends": "standard"
+  "extends": "standard",
+  "rules": {
+    "prefer-const": 2
+  }
 }

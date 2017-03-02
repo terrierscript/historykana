@@ -4,12 +4,12 @@ import util from 'util'
 
 export class HistoryKana {
   constructor (options) {
-    var defaults = {
+    const defaults = {
       kanaRegexp: '^[ 　ぁあ-んー]*$'
     }
 
     this.options = extend({}, defaults, options)
-    var regExp = this.options.kanaRegexp
+    let regExp = this.options.kanaRegexp
     if (!util.isRegExp(regExp)) {
       regExp = new RegExp(regExp)
     }
@@ -17,13 +17,13 @@ export class HistoryKana {
   }
   execute (histories) {
     histories = this.shrink(histories)
-    var partialized = partialize(histories)
-    var kana = this.extractKana(partialized)
+    const partialized = partialize(histories)
+    const kana = this.extractKana(partialized)
     return kana.join('')
   }
   extractKana (partialized) {
     return partialized.map((group) => {
-      var kanas = group.filter((value) => {
+      const kanas = group.filter((value) => {
         return this.isKana(value)
       })
       return kanas.reduce((result, kana) => {
@@ -51,7 +51,7 @@ export class HistoryKana {
   // remove concurrent same value.
   shrink (histories) {
     return histories.reduce((result, value) => {
-      var last = result[result.length - 1]
+      const last = result[result.length - 1]
       if (last === undefined || last !== value) {
         result.push(value)
       }
