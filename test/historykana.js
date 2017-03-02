@@ -102,5 +102,9 @@ describe("historykana", function(){
       var steps = ["", "や", "ゆ"]
       stepTest(steps, "ゆ")
     })
+    it("espcae regexp character", function(){
+      var steps = [ "ｙ", "や", "やｍ", "やま", "山+" ]
+      stepTest(steps, "やま")
+    })
   })
 })
