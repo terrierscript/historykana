@@ -1,6 +1,6 @@
 {
   "name": "historykana",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Analyse Japanese Furigana from key input history",
   "main": "index.js",
   "scripts": {
