@@ -12,7 +12,7 @@ describe('partial', function () {
   })
   it('right', function () {
     const steps = ['あ', 'あｋ', 'あか', '垢', '赤', 'お赤', 'おｎ赤', 'おに赤', '鬼赤']
-    assert.deepEqual(heads(partial(steps)), [ '鬼', '赤'])
+    assert.deepEqual(heads(partial(steps)), ['鬼', '赤'])
   })
   it('red centrer', function () {
     const steps = ['あ', 'あｋ', 'あか', '赤', 'あ赤', 'あお赤', '青赤', '青赤ｋ', '青赤き', '青赤きい', '青赤きいｒ', '青赤きいろ', '青赤黄色']
@@ -28,12 +28,12 @@ describe('partial', function () {
   it('same kanji partial', function () {
     const steps = ['', 'ｎ', 'な', 'なｍ', 'なま', '生', '生う', '生うｂ', '生うぶ', '生生', 'ｓ生生', 'せ生生', 'せい生生', '生生生']
     const result = partial(steps)
-    assert.deepEqual(heads(result), [ '生', '生', '生'])
+    assert.deepEqual(heads(result), ['生', '生', '生'])
   })
   it('Remove', function () {
     // In mobile app. input by char
-    const steps = [ 'ｙ', 'や', 'やｍ', 'やま', 'やまｄ', 'やまだ', '山田', '山田', '山田ｔ', '山田た', '山田たｒ', '山田たろ', '山田たろう', '山田太郎', '山田太郎', '山田太', '山田' ]
+    const steps = ['ｙ', 'や', 'やｍ', 'やま', 'やまｄ', 'やまだ', '山田', '山田', '山田ｔ', '山田た', '山田たｒ', '山田たろ', '山田たろう', '山田太郎', '山田太郎', '山田太', '山田']
     const result = partial(steps)
-    assert.deepEqual(heads(result), [ '山田'])
+    assert.deepEqual(heads(result), ['山田'])
   })
 })

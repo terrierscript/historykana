@@ -90,7 +90,7 @@ describe('historykana', function () {
       stepTest(steps, 'やまだ')
     })
     it('remove tarou', function () {
-      const steps = [ 'ｙ', 'や', 'やｍ', 'やま', 'やまｄ', 'やまだ', '山田', '山田', '山田ｔ', '山田た', '山田たｒ', '山田たろ', '山田たろう', '山田太郎', '山田太郎', '山田太', '山田' ]
+      const steps = ['ｙ', 'や', 'やｍ', 'やま', 'やまｄ', 'やまだ', '山田', '山田', '山田ｔ', '山田た', '山田たｒ', '山田たろ', '山田たろう', '山田太郎', '山田太郎', '山田太', '山田']
       stepTest(steps, 'やまだ')
     })
     it('remove and add', function () {
@@ -102,7 +102,7 @@ describe('historykana', function () {
       stepTest(steps, 'ゆ')
     })
     it('espcae regexp character', function () {
-      const steps = [ 'ｙ', 'や', 'やｍ', 'やま', '山+' ]
+      const steps = ['ｙ', 'や', 'やｍ', 'やま', '山+']
       stepTest(steps, 'やま')
     })
   })
