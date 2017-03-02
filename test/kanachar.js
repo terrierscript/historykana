@@ -1,30 +1,30 @@
-var assert = require("assert")
-var HistoryKana = require("../lib/historykana").HistoryKana
+const assert = require('assert')
+const HistoryKana = require('../lib/historykana').HistoryKana
 
-var hKana = new HistoryKana()
-var kanachar = function(str){
+const hKana = new HistoryKana()
+const kanachar = function (str) {
   return hKana.isKana(str)
 }
 
-describe("hiragana", function(){
-  describe("is_hiragana", function(){
-    it("noaml", function(){
-      assert.equal(true, kanachar("あいう"))
+describe('hiragana', function () {
+  describe('is_hiragana', function () {
+    it('noaml', function () {
+      assert.equal(true, kanachar('あいう'))
     })
-    it("kanji", function(){
-      assert.equal(false, kanachar("山田"))
+    it('kanji', function () {
+      assert.equal(false, kanachar('山田'))
     })
-    it("kanji + hiragana", function(){
-      assert.equal(false, kanachar("山田たろう"))
+    it('kanji + hiragana', function () {
+      assert.equal(false, kanachar('山田たろう'))
     })
-    it("ー", function(){
-      assert.equal(true, kanachar("すーぱー"))
+    it('ー', function () {
+      assert.equal(true, kanachar('すーぱー'))
     })
-    it("with space", function(){
-      assert.equal(true, kanachar("やまだ　たろう"))
+    it('with space', function () {
+      assert.equal(true, kanachar('やまだ　たろう'))
     })
-    it("with harf space", function(){
-      assert.equal(true, kanachar("やまだ たろう"))
+    it('with harf space', function () {
+      assert.equal(true, kanachar('やまだ たろう'))
     })
   })
 })

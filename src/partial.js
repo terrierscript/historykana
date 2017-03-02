@@ -94,7 +94,7 @@ const split = function (array, breakpoint) {
   }
 }
 
-var partializeRecursive = function (array) {
+const partializeRecursive = function (array) {
   const breaks = getBreakPoint(array)
   // recursive edge
   if (breaks.breakpoint === -1) {
