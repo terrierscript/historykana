@@ -1,7 +1,8 @@
 {
   "scripts": {
     "postinstall": "lerna bootstrap --concurrency=1",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "lint": "lerna run lint"
   },
   "devDependencies": {
     "lerna": "2.0.0-beta.38"
