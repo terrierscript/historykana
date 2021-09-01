@@ -10,7 +10,7 @@ export class HistoryKana {
 
     this.options = extend({}, defaults, options)
     let regExp = this.options.kanaRegexp
-    if (!util.isRegExp(regExp)) {
+    if (!util.types.isRegExp(regExp)) {
       regExp = new RegExp(regExp)
     }
     this.kanaRegexp = regExp
