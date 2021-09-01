@@ -1,6 +1,5 @@
 import partialize from './partial'
 import extend from 'extend'
-import util from 'util'
 
 export class HistoryKana {
   constructor (options) {
@@ -10,7 +9,7 @@ export class HistoryKana {
 
     this.options = extend({}, defaults, options)
     let regExp = this.options.kanaRegexp
-    if (!util.isRegExp(regExp)) {
+    if (!(regExp instanceof RegExp)) {
       regExp = new RegExp(regExp)
     }
     this.kanaRegexp = regExp
