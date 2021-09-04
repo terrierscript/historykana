@@ -26,7 +26,8 @@
   "dependencies": {
     "compact-diff": "0.0.3",
     "extend": "^3.0.0",
-    "regexp.escape": "^1.0.2"
+    "regexp.escape": "^1.0.2",
+    "util": "^0.12.4"
   },
   "devDependencies": {
     "babel-cli": "^6.5.0",
