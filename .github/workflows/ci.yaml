@@ -13,5 +13,5 @@ jobs:
       with:
         cache: yarn
     - run: yarn
-    - run: test
-    - run: build
+    - run: yarn test
+    - run: yarn build
