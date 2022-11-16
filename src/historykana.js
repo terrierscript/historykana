@@ -1,6 +1,6 @@
 import partialize from './partial'
 import extend from 'extend'
-import util from 'util'
+import typeOf from "just-typeof"
 
 export class HistoryKana {
   constructor (options) {
@@ -10,7 +10,7 @@ export class HistoryKana {
 
     this.options = extend({}, defaults, options)
     let regExp = this.options.kanaRegexp
-    if (!util.types.isRegExp(regExp)) {
+    if (typeOf(regExp) !== "regexp") {
       regExp = new RegExp(regExp)
     }
     this.kanaRegexp = regExp
